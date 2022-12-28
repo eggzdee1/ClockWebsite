@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Clock</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1>This is a clock.</h1>
+		<form action="time.html" method = "GET">
+			<div class="clockSettings">
+				<div class="col">
+					<h2>Time Zone</h2>
+					<select name="timeZone">
+						<option value="PT">Pacific Time</option>
+						<option value="MT">Mountain Time</option>
+						<option value="CT">Central Time</option>
+						<option value="ET">Eastern Time</option>
+					</select>
+				</div>
+				<div class="col">
+					<h2>Display Mode</h2>
+					<input type="radio" id="12" name="1224" value="12" required>
+					<label for="12">12-Hour Time</label><br>
+					<input type="radio" id="24" name="1224" value="24">
+					<label for="24">24-Hour Time</label>
+				</div>
+				<div class="col">
+					<h2>Daylight Savings Time</h2>
+					<input type="checkbox" id="dstOn" name="dst" value="on"><label for="dstOn">On</label>
+				</div>
+			</div>
+			<div class="buttonWrapper">
+				<button type="submit" class="enter" id="enterID">ENTER</button>
+			</div>
+		</form>
+		<div class = "fieldRequired" id="fieldRequiredID" hidden>Please select a display mode.</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="fieldRequired.js"></script>
+	</body>
+</html>
